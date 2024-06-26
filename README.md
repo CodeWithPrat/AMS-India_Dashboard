@@ -47,3 +47,11 @@ To get a local copy up and running, follow these simple steps:
    ```sh
    git clone https://github.com/your/repository.git](https://github.com/CodeWithPrat/AMS-India_Dashboard.git
    cd repository
+
+   ## Contributing
+
+Contributions are welcome! Please fork the repository and create a pull request with your improvements.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
