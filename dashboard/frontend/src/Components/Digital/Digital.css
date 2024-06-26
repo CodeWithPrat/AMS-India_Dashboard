@@ -1,0 +1,162 @@
+
+
+/* Digital I/O */
+
+.dio-main {
+    padding: 20px;
+  }
+  
+  .dio-head {
+    font-size: 45px !important;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .dio-subhead {
+    font-size: 30px !important;
+    font-weight: 600;
+    text-align: left !important;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    padding: 30px;
+  }
+  
+  .dio-table {
+    width: 100%;
+    border: #000000 1px solid;
+  }
+  
+  .dio-table th,
+  .dio-table td {
+    padding: 8px;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .dio-table th {
+    background-color: #929292;
+  }
+  
+  .dio-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .dio-table tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  .dio-table td {
+    padding: 8px;
+    text-align: center;
+    height: 80px; 
+  }
+  
+  
+  .led-indicator {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 0 auto;
+  }
+  
+  .led-indicator.on {
+    background-color: green;
+  }
+  
+  .led-indicator.off {
+    background-color: red;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px; 
+    height: 20px; 
+    margin: 20px;
+    transform: scale(2);
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 20px; 
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px; 
+    width: 16px; 
+    left: 2px; 
+    bottom: 2px; 
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+
+
+  
+/*Digital IO*/
+
+.led-indicator {
+  width: 35px; 
+  height: 35px;
+  border-radius: 50%; 
+  display: inline-block;
+  margin-right: 5px; 
+}
+
+.on {
+  background-color: green; 
+}
+
+.off {
+  background-color: red; 
+}
+
+.custom-toggle{
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px; 
+}
+@media screen and (max-width: 1024px) {
+    .back_navigator {
+        width: 100% !important;
+    }
+}

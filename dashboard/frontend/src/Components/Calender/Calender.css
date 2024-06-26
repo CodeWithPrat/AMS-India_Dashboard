@@ -1,0 +1,198 @@
+.calender_box {
+  height: 400px;
+  width: 850px;
+  margin-top: 2px;
+}
+
+.modal {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+
+.calendar-body {
+  box-shadow: rgba(8, 71, 131, 0.25) 0px 50px 100px -20px, rgba(10, 133, 170, 0.3) 0px 30px 60px -30px, rgba(7, 83, 158, 0.35) 0px -2px 6px 0px inset;
+  background: hsla(186, 33%, 94%, 1);
+  background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#EBF4F5", endColorstr="#B5C6E0", GradientType=1);
+  border-radius: 50px;
+  padding: 10px;
+  margin: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  transition: margin-left 0.3s ease;
+  width: 900px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-dialog {
+  width: 400px;
+  max-height: 80vh;
+  position: relative;
+  margin: 10% auto;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
+
+/* Media queries for laptop (max-width: 992px) */
+
+
+
+@media all and (min-width: 1024px) {
+  .calender_box {
+    height: 430px;
+    width: 450px;
+    padding: 5px;
+  }
+
+  .calendar-body {
+    width: 480px;
+    height: 450px;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 40px;
+  }
+
+  .modal-dialog {
+    width: 350px;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+  .calender_box {
+    height: 450px;
+    width: 570px;
+    padding: 5px;
+  }
+
+  .calendar-body {
+    width: 700px;
+    height: 450px;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 40px;
+  }
+
+  .modal-dialog {
+    width: 350px;
+  }
+  
+}
+
+@media (min-width: 1920px) {
+  .calender_box {
+    height: 350px;
+    width: 860px;
+    padding: 10px;
+  }
+
+  .calendar-body {
+    width: 880px;
+    height: 460px;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 40px;
+  }
+
+  .modal-dialog {
+    width: 350px;
+  }
+}
+
+/* Media queries for mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .calender_box {
+    height: 300px;
+    width: 100%;
+    margin-top: 2px;
+  }
+
+  .calendar-body {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 30px;
+  }
+
+  .modal-dialog {
+    width: 90%;
+    margin: 5% auto;
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+
+  .modal-header {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+
+  .modal-body {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+
+  .modal-footer {
+    padding-top: 8px;
+  }
+}
+
+
+
+@media screen and (max-width: 932px) {
+    .calendar-body {
+        width: 370px !important;
+        height: 400px !important;
+        border-radius: 20px;
+    }
+    .calender_box {
+        width: 370px;
+        padding: 5px;
+        margin-right: 15px !important;
+    }
+}
+
+

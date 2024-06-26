@@ -1,0 +1,179 @@
+.menu {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 10rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu li {
+    position: absolute;
+    left: 0;
+    list-style: none;
+    transform-origin: 125px;
+    transition: 0.5s;
+    transform: rotate(0deg) translateX(100px);
+    transition-delay: calc(0.1s * var(--i));
+  }
+  
+  .menu.active li {
+    transform: rotate(calc(360deg / 8 * var(--i)));
+  }
+  
+  .menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-image: linear-gradient(120deg, #89f7fe 0%, #006aff 100%);
+    border-radius: 50%;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+    color: black;
+    transition: 0.5s;
+  }
+  
+  .menu li:hover a {
+    width: 45px;
+    height: 45px;
+    color: red;
+  }
+  
+  .toggle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: linear-gradient(to top, #b943fd 0%, #fa71cd 100%);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0,0,0,0.15);
+    font-size: 2rem;
+    transition: transform 1.25s;
+  }
+
+  .toggle-text {
+    display: none;
+    position: absolute;
+    top: -2rem; /* Adjust position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  
+  .toggle:hover .toggle-text {
+    display: block;
+  }
+
+  
+  .menu.active .toggle {
+    transform: rotate(315deg);
+  }
+  
+  .assist_text {
+    display: none;
+    width: 200px;
+    white-space: nowrap;
+    margin-top: -3.5rem;
+    margin-left: -40px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    font-family:Arial, Helvetica, sans-serif;
+
+  }
+  
+  .menu.active .assist_text {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .assist_icon {
+    display: flex;
+  }
+  
+  .assist_icon:hover {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Add specific adjustments for problematic icons */
+
+.menu li:nth-child(2) .assist_icon { /*temperature*/
+  margin-left: 20px; 
+}
+
+  .menu li:nth-child(7) .assist_icon,
+  .menu li:nth-child(4) .assist_icon,
+  .menu li:nth-child(5) .assist_icon{
+    margin-left: 10px; 
+  }
+
+  /*Machine Status*/
+.menu li:nth-child(3) .assist_icon { 
+    margin-left: 30px; 
+  }
+  .menu li:nth-child(3) .assist_text {
+    margin-left: -50px;
+  }
+
+
+/* Digital */
+  .menu li:nth-child(5) .assist_text {
+    margin-left: -30px; 
+  }
+
+/* e top digital */ 
+.menu li:nth-child(6) .assist_icon {
+  margin-left: 20px;
+}
+
+
+/* oee calculator */
+
+.menu li:nth-child(8) .assist_icon {
+    margin-left: 30px; 
+  }
+  .menu li:nth-child(8) .assist_text {
+    margin-left: -55px;
+  }
+
+/* Home */
+  .menu li:nth-child(9) .assist_text{
+    margin-left: -30px ;
+  }
+  .menu li:nth-child(9) .assist_icon {
+    margin-left: 10px;
+  }
+
+
+
+  .inactive {
+    margin-top: -15rem;
+    transition: 0.8s ease-in-out;
+  }
+
+  
+  .active {
+    transition: 0.8s ease-in-out;
+    margin-top: 1rem;
+  } 
+
+  .assist_bar {
+    margin-left: 15rem;
+  }
+  

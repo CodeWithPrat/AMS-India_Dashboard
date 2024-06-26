@@ -1,0 +1,520 @@
+
+.containerss {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.containerss .icon {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.containerss .icon .imgBx {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: rotate(calc(360deg/8 * var(--i)));
+    transform-origin: 215px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.containerss .icon .imgBx.actives {
+    box-shadow: 0 0 0 4px rgb(85, 0, 141) , 0 0 0 6px red;
+}
+.containerss .icon .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: rotate(calc(-360deg/8 * var(--i)));
+    transition: 0.5s;
+    filter: grayscale(60%);
+}
+
+.containerss .icon .imgBx.actives img {
+    filter: grayscale(0)
+}
+
+.contentss {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contentss::before {
+content: '';
+position: absolute;
+inset: 40px;
+border: 8px solid transparent;
+border-left: 8px solid blue;
+border-right: 8px solid rgb(255, 119, 56);
+border-radius: 50%;
+animation: animte_01 4s linear infinite;
+z-index: 1;
+pointer-events: none;
+}
+
+@keyframes animte_01 {
+        0% {
+            rotate: 0deg;
+        }
+        100% {
+            rotate: 360deg;
+        }
+    
+}
+
+.contentss::after {
+content: '';
+position: absolute;
+inset: 60px;
+border: 4px solid transparent;
+border-left: 5px solid rgb(0, 201, 60);
+border-right: 5px solid lightcoral;
+border-radius: 50%;
+animation: animte_02 2.5s linear infinite;
+z-index: 1;
+pointer-events: none;
+}
+
+@keyframes animte_02 {
+    
+        0% {
+            rotate: 360deg;
+        }
+        100% {
+            rotate: 0deg;
+        }
+    
+}
+
+.contentBx {
+    position: absolute;
+    transform: scale(0);
+    transition: 0.5s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentBx.actives {
+    transform: scale(1);
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.contentBx .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 180px;
+    border-radius: 25%;
+    height: 180px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.contentBx .card .imgBx {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.contentBx .card .imgBx img {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.containerss .card .textBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerss .card .textBx h2 {
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(23, 21, 21);
+    line-height: 1em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media screen and (max-width: 932px) {
+    .containerss {
+        width: 250px;
+        height: 250px;
+        position: relative;
+    }
+    .containerss .icon {
+        position: relative;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    }
+    
+.containerss .icon .imgBx {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: rotate(calc(360deg/8 * var(--i)));
+    transform-origin: 150px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.containerss .icon .imgBx.actives {
+    box-shadow: 0 0 0 4px rgb(85, 0, 141) , 0 0 0 6px red;
+}
+.containerss .icon .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: rotate(calc(-360deg/8 * var(--i)));
+    transition: 0.5s;
+    filter: grayscale(60%);
+}
+
+.contentBx .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 120px;
+    border-radius: 25%;
+    height: 120px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.contentBx .card .imgBx {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+    .containerss .card .textBx h2 {
+        font-size: 0.8rem;
+    }
+    .contentss::before {
+        content: '';
+        inset: 30px;
+        border: 6px solid transparent;
+        border-left: 4px solid blue;
+        border-right: 4px solid rgb(255, 119, 56);
+    }
+    .contentss::after {
+        content: '';
+        position: absolute;
+        inset: 50px;
+        border: 4px solid transparent;
+        border-left: 2px solid rgb(0, 201, 60);
+        border-right: 2px solid lightcoral;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .containerss {
+        width: 250px;
+        height: 250px;
+        position: relative;
+    }
+    .containerss .icon {
+        position: relative;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    }
+    
+.containerss .icon .imgBx {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: rotate(calc(360deg/8 * var(--i)));
+    transform-origin: 150px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.containerss .icon .imgBx.actives {
+    box-shadow: 0 0 0 4px rgb(85, 0, 141) , 0 0 0 6px red;
+}
+.containerss .icon .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: rotate(calc(-360deg/8 * var(--i)));
+    transition: 0.5s;
+    filter: grayscale(60%);
+}
+
+.contentBx .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 120px;
+    border-radius: 25%;
+    height: 120px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.contentBx .card .imgBx {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+    .containerss .card .textBx h2 {
+        font-size: 0.8rem;
+    }
+    .contentss::before {
+        content: '';
+        inset: 30px;
+        border: 6px solid transparent;
+        border-left: 4px solid blue;
+        border-right: 4px solid rgb(255, 119, 56);
+    }
+    .contentss::after {
+        content: '';
+        position: absolute;
+        inset: 50px;
+        border: 4px solid transparent;
+        border-left: 2px solid rgb(0, 201, 60);
+        border-right: 2px solid lightcoral;
+    }
+}
+
+
+@media all and (min-width: 1200px) {
+    .containerss {
+        width: 350px;
+        height: 350px;
+        position: relative;
+    }
+    .containerss .icon {
+        position: relative;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    }
+    
+.containerss .icon .imgBx {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: rotate(calc(360deg/8 * var(--i)));
+    transform-origin: 215px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.containerss .icon .imgBx.actives {
+    box-shadow: 0 0 0 4px rgb(85, 0, 141) , 0 0 0 6px red;
+}
+.containerss .icon .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: rotate(calc(-360deg/8 * var(--i)));
+    transition: 0.5s;
+    filter: grayscale(60%);
+}
+
+.contentBx .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 180px;
+    border-radius: 25%;
+    height: 180px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.contentBx .card .imgBx {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+    .containerss .card .textBx h2 {
+        font-size: 1.2rem;
+    }
+    .contentss::before {
+        content: '';
+        inset: 40px;
+        border: 8px solid transparent;
+        border-left: 8px solid blue;
+        border-right: 8px solid rgb(255, 119, 56);
+    }
+    .contentss::after {
+        content: '';
+        position: absolute;
+        inset: 60px;
+        border: 4px solid transparent;
+        border-left: 5px solid rgb(0, 201, 60);
+        border-right: 5px solid lightcoral;
+    }
+}
+
+@media all and (min-width: 1920px) {
+    .containerss {
+        width: 350px;
+        height: 350px;
+        position: relative;
+    }
+    .containerss .icon {
+        position: relative;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    }
+    
+.containerss .icon .imgBx {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: rotate(calc(360deg/8 * var(--i)));
+    transform-origin: 215px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.containerss .icon .imgBx.actives {
+    box-shadow: 0 0 0 4px rgb(85, 0, 141) , 0 0 0 6px red;
+}
+.containerss .icon .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: rotate(calc(-360deg/8 * var(--i)));
+    transition: 0.5s;
+    filter: grayscale(60%);
+}
+
+.contentBx .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 180px;
+    border-radius: 25%;
+    height: 180px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.contentBx .card .imgBx {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+    .containerss .card .textBx h2 {
+        font-size: 1.2rem;
+    }
+    .contentss::before {
+        content: '';
+        inset: 40px;
+        border: 8px solid transparent;
+        border-left: 8px solid blue;
+        border-right: 8px solid rgb(255, 119, 56);
+    }
+    .contentss::after {
+        content: '';
+        position: absolute;
+        inset: 60px;
+        border: 4px solid transparent;
+        border-left: 5px solid rgb(0, 201, 60);
+        border-right: 5px solid lightcoral;
+    }
+}

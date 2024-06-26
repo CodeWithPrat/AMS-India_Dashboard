@@ -1,0 +1,212 @@
+.progress-circle {
+  width: 100%;
+  max-width: 170px;
+  height: 170px;
+  margin: 0 auto;
+}
+
+.oee_text {
+  margin: 10px;
+  font-size: 25px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+/* Calculator */
+.calculator_card {
+  box-shadow: rgba(8, 71, 131, 0.25) 0px 50px 100px -20px, rgba(10, 133, 170, 0.3) 0px 30px 60px -30px, rgba(7, 83, 158, 0.35) 0px -2px 6px 0px inset;
+  background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+  border-radius: 50px;
+  width: 680px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.oee-btn {
+  height: 45px;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ddd;
+  background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
+  margin-right: 10px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.oee-btn:hover {
+  background-image: linear-gradient(to right, #172da8 0%, rgb(87, 48, 158) 100%);
+  color: #ddd;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.05);
+}
+
+.BarChart-card {
+  background-color: #fff;
+  box-shadow: rgba(26, 3, 233, 0.25) 0px 14px 28px, rgba(6, 36, 207, 0.22) 0px 10px 10px;
+  margin-bottom: 15px;
+  width: 700px;
+  height: 450px;
+  margin-top: 20px;
+}
+
+.APQ-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 700px;
+  background-color: #fff;
+  box-shadow: rgba(26, 3, 233, 0.25) 0px 14px 28px, rgba(6, 36, 207, 0.22) 0px 10px 10px;
+  margin-bottom: 15px;
+  margin-left: -80px;
+  margin-top: 20px;
+}
+
+.OEEChart-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 500px;
+  background-color: #fff;
+  box-shadow: rgba(26, 3, 233, 0.25) 0px 14px 28px, rgba(6, 36, 207, 0.22) 0px 10px 10px;
+  margin-top: 20px;
+}
+
+
+
+.oee-head-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.oee-sub-container {
+  background-color: #6b46c1; /* bg-violet-800 */
+  height: 6rem; /* h-24 */
+  width: 50%; /* w-1/2 */
+  color: white;
+  border-radius: 9999px; /* rounded-full */
+  padding: 1rem; /* p-4 */
+  text-align: center;
+}
+
+.oee-sub-container p {
+  font-size: 2.5rem; /* Tailwind equivalent of text-xl */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .oee-sub-container {
+    width: 75%; /* Make it wider on smaller screens */
+    height: 5rem; /* Reduce height */
+    padding: 0.75rem; /* Reduce padding */
+  }
+
+  .oee-sub-container p {
+    font-size: 1.25rem; /* Reduce font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .oee-sub-container {
+    width: 90%; /* Even wider on very small screens */
+    height: 4rem; /* Further reduce height */
+    padding: 0.5rem; /* Further reduce padding */
+  }
+
+  .oee-sub-container p {
+    font-size: 1rem; /* Further reduce font size */
+  }
+}
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .calculator_card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .oee-btn {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .BarChart-card, .APQ-card, .OEEChart-card {
+    height: auto;
+    width: 90%;
+  }
+
+  .oee_text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator_card {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .oee-btn {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .BarChart-card, .APQ-card, .OEEChart-card {
+    height: auto;
+    width: 95%;
+  }
+
+  .oee_text {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .APQ-card {
+    width: 450px;
+    margin-left: 1rem;
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .oee_items {
+    min-width: 100%;
+  }
+  .BarChart-card {
+    width: 480px;
+    margin-left: -3rem;
+  }
+  .APQ-card {
+    width: 510px;
+    margin-left: 1.5rem;
+  }
+  .OEEChart-card {
+    width: 550px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .oee_items {
+    min-width: 100%;
+  }
+  .BarChart-card {
+    width: 650px;
+    margin-left: -3rem;
+  }
+  .APQ-card {
+    width: 650px;
+    margin-left: 2rem;
+  }
+  .OEEChart-card {
+    width: 600px;
+    
+  }
+}

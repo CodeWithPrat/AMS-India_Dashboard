@@ -1,0 +1,102 @@
+/* Temperature css */
+
+.gaugetwo {
+  box-shadow: rgba(3, 110, 233, 0.25) 0px 14px 28px, rgba(6, 194, 207, 0.22) 0px 10px 10px;
+}
+
+
+/* App.css */
+.content-container {
+  position: relative;
+  transition: margin-left 0.3s ease;
+}
+
+#chart {
+  width: 600px;
+}
+/* 
+@media screen and (max-width: 932px) {
+  body {
+    width: 400px;
+  }
+} */
+
+
+
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+
+.nav-links a {
+  color: #343a40; /* Dark color for text */
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #007bff; /* Blue color on hover/focus */
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #343a40;
+  transition: color 0.3s ease;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+  color: #007bff;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: transparent; /* No background color */
+  box-shadow: none; /* Remove box shadow */
+  z-index: 1000;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  border-radius: 0.25rem;
+}
+
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  color: #343a40;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+.fs-2 {
+  font-size: 1.5rem; /* Adjust font size for links */
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+

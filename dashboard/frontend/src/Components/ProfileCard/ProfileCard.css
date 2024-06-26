@@ -1,0 +1,42 @@
+.profile-card {
+    width: 300px;
+    padding: 20px;
+    background: #59dacf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+  }
+  
+  .profile-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .profile-details h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .profile-details p {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #666;
+  }
+
+  .user-index .icon {
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .user-index .icon:hover {
+    opacity: 0.7;
+  }
+  
+  

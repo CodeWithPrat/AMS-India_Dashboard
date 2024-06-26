@@ -1,0 +1,650 @@
+/* dashboard cards */
+.cards {
+  background-image: linear-gradient(to top, #c6bef8 0%, #7c74f1 100%);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  height: auto;
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 10px;
+  border-radius: 40% 20px 40% 20px;
+  border: 5px outset rgb(168, 131, 253);
+  padding: 20px;
+}
+
+.dashboard_cards {
+  display: flex;
+  gap: 35px;
+  margin-top: 35px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 100%;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid rgb(48, 102, 173);
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
+  margin-bottom: 20px;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: opacity 0.3s;
+}
+
+.icon-wrapper {
+  font-size: 2rem;
+  color: white;
+}
+
+.card-text {
+  display: none;
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+}
+
+.box:hover .card-text {
+  display: block;
+}
+
+.box:hover {
+  transform: scale(1.15);
+  border: 10px solid rgb(0, 33, 77);
+}
+
+/* Media Queries */
+/*
+@media only screen and (min-width: 576px) {
+  .box {
+    width: calc(50% - 40px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .box {
+    width: calc(33.33% - 40px);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .box {
+    width: calc(25% - 40px);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .box {
+    width: calc(20% - 40px);
+  }
+}
+  */
+
+/***********************************************/
+.background {
+  justify-content: center;
+  height: 720px !important;
+  border-radius: 0 50% 0 35%;
+  align-items: center;
+  background: rgb(226,230,242);
+  background: radial-gradient(circle, rgba(226,230,242,1) 0%, rgb(109, 112, 245) 100%);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  margin-right: 1.5rem;
+  margin-left: 1rem;
+  border: 8px outset rgb(150, 125, 241);
+}
+
+.background_img {
+  height: 750px !important; 
+  width: 750px !important;
+  border-radius: 50% 0 50%;
+  display: flex;
+  z-index: 2;
+  background-color: #f6f4d2;
+  border: 20px outset #6a428f;
+  margin-right: 12rem;
+  float: right;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.content {
+  font-size: 40px;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bolder;
+  color: #000138;
+}
+
+.content-text {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 17px !important;
+  line-height: 1.6;
+  color: #2e2e2e;
+  text-align: center;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.emphasized {
+  font-weight: bold;
+  color: rgb(15, 0, 102);
+}
+
+.background_contents {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-top: 20px !important;
+  margin-left: 2.5rem !important;
+  width: 750px;
+  height: 750px !important;
+}
+
+.background_contents.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.background_content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-top: 20px !important;
+  margin-left: 2.5rem !important;
+  width: 750px;
+  height: 750px !important;
+}
+
+.background_content.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard--container {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
+.dashboard--component {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.cmti_logos {
+  width: 200px;
+  height: auto;
+}
+
+.assist_bars {
+  margin-left: -2rem !important;
+  margin-top: 15rem;
+}
+
+
+/*Header*/
+.real_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 80px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: serif;
+  word-spacing: 10px;
+  background-image: linear-gradient(-225deg, #38165e 0%, #745bc5 53%, #181152 100%);
+  color: #ffffff;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media all and (max-width: 600px) {
+  .real_container {
+      width: 90%;
+      height: 70px;
+      font-size: 14px;
+      word-spacing: 10px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media all and (min-width: 600px) {
+  .real_container {
+      width: 80%;
+      height: 70px;
+      font-size: 16px;
+      word-spacing: 12px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media all and (min-width: 768px) {
+  .real_container {
+      width: 70%;
+      height: 80px;
+      font-size: 18px;
+      word-spacing: 15px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media all and (min-width: 992px) {
+  .real_container {
+      width: 60%;
+      height: 90px;
+      font-size: 20px;
+      word-spacing: 18px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+/* Media Queries */
+
+
+@media all and (min-width: 1024px) {
+  .content {
+    font-size: 25px !important;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+  }
+
+  .content-text {
+    font-size: 12px !important;
+    width: 355px !important;
+    padding: 2px;
+    margin-left: -5.3rem;
+  }
+
+  .background_img {
+    height: 450px !important;
+    width: 450px !important;
+    border-radius: 50% 0 50%;
+    display: flex;
+    margin-left: 6rem;
+    margin-top: 3.7rem;
+    border: 20px outset #6a428f;
+    float: right;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  }
+
+  .background {
+    height: 630px !important;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    border-radius: 0 20% 0 15%;
+  }
+
+  .assist_bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8rem !important;
+  }
+  .assist_bars {
+    margin-left: -3rem !important;
+  }
+
+
+  .cards {
+    height: 300px !important;
+    border-radius: 40% 20px 35% 20px;
+  }
+  .dashboard_cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box {
+   width: 115px !important;
+   height: 115px !important;
+  }
+  .real_container {
+    width: 80%;
+    height: 100px;
+}
+.real_time {
+  font-size: 24px !important;
+  word-spacing: 5px;
+}
+.cmti_logos {
+  width: 120px !important;
+}
+}
+
+/* Medium screens (tablets) */
+
+@media all and (max-width: 1199px) and (min-width: 768px) {
+  .cards {
+    height: 250px;
+    border-radius: 30% 15px 30% 15px;
+  }
+
+  .dashboard_cards {
+    height: 220px;
+    gap: 25px;
+  }
+
+  .background_img {
+    height: 300px;
+    width: 600px;
+  }
+
+  .background {
+    height: 450px;
+  }
+
+
+  .content {
+    font-size: 30px;
+  }
+
+  .content-text {
+    font-size: 14px;
+  }
+}
+
+
+/* Large screens */
+@media all and (min-width: 1200px) {
+  .content {
+    font-size: 35px !important;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    flex-wrap: nowrap;
+  }
+
+  .content-text {
+    font-size: 15px !important;
+    width: 600px !important;
+    padding: 5px;
+    margin-left: -4rem;
+  }
+
+  .background_img {
+    height: 520px !important;
+    width: 550px !important;
+    border-radius: 50% 0 50%;
+    display: flex;
+    margin-left: 8rem;
+    margin-top: 3.7rem;
+    border: 20px outset #6a428f;
+    float: right;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  }
+
+  .background {
+    height: 650px !important;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    border-radius: 0 50% 0 35%;
+  }
+
+  .assist_bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8rem;
+  }
+  .assist_bars {
+    margin-left: 1rem !important;
+  }
+
+  .background_img {
+    max-height: 100% !important;
+    max-width: 100% !important;
+    object-fit: contain;
+  }
+
+  .cards {
+    height: 350px !important;
+    border-radius: 40% 20px 35% 20px;
+  }
+  .dashboard_cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box {
+    width: 165px !important;
+    height: 165px !important;
+  }
+  .cmti_logos {
+    width: 200px !important;
+  }
+  .real_container {
+    width: 90%;
+    height: 100px;
+    word-spacing: 10px;
+}
+.real_time {
+  font-size: 36px !important;
+}
+}
+
+@media all and (min-width: 1920px) {
+
+  .real_container {
+    width: 70%;
+  }
+  .real_time {
+    font-size: 40px !important;
+  }
+  .content {
+    font-size: 40px !important;
+    width: 800px;
+  }
+
+  .content-text {
+    font-size: 16.8px !important;
+    width: 760px !important;
+    padding: 10px;
+    margin-left: -3rem;
+  }
+  .cmti_logos {
+    width: 250px !important;
+  }
+
+  .background_img {
+    height: 400px;
+    width: 700px;
+  }
+  .cards {
+    height: 340px !important;
+  }
+
+  .background {
+    height: 600px;
+    border-radius: 0 50% 0 35%;
+
+  }
+
+  .box {
+    width: 190px !important;
+    height: 190px !important;
+  }
+  .cal_pdf {
+    flex-wrap: initial;
+  }
+
+}
+
+/* Medium screens (tablets) */
+/*
+@media all and (max-width: 1199px) and (min-width: 768px) {
+  .cards {
+    height: 250px;
+    border-radius: 30% 15px 30% 15px;
+  }
+
+  .dashboard_cards {
+    height: 220px;
+    gap: 25px;
+  }
+
+  .background_img {
+    height: 300px;
+    width: 600px;
+  }
+
+  .background {
+    height: 450px;
+  }
+
+
+  .content {
+    font-size: 30px;
+  }
+
+  .content-text {
+    font-size: 14px;
+  }
+}
+  */
+
+/* Mobile Screens  */
+@media all and (max-width: 932px) {
+  
+
+  .real_container {
+    width: 370px !important;
+    padding: 8px;
+    margin-right: 40px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+  }
+  .real_time {
+    width: 370px !important;
+    height: 45px;
+    font-size: 1.2rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .background {
+    background-color: #6a428f;
+    width: 370px !important;
+    height: 1300px !important;
+    margin-left: 15px !important;
+    margin-right: 5px !important;
+    
+  }
+
+  .content {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-text {
+    width: 320px !important; 
+    font-family: Arial, sans-serif;
+    font-size: 15px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    margin-left: 5px !important;
+    line-height: 1.8 !important;
+    color: #333 !important;
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 10px !important; /* Rounded corners for better appearance */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; /* Shadow for depth */
+  }
+
+  .background_img {
+    display: none !important; /* Hide background image on smaller screens */
+  }
+  .dashboard_cards {
+    display: flex;
+    height: 620px !important;
+    width: 370px !important;
+  }
+  .box {
+    width: calc(40.33% - 20px)  !important; /* Adjust width to fit three boxes in a row with some spacing */
+    height: 130px !important;
+    position: relative;
+    margin: 5px;
+  }
+  .cards {
+    height: auto;
+    border-radius: 25px;
+    width: 370px !important;
+    background-color: none !important;
+    margin-right: 5px;
+  }
+
+  .dashboard_cards {
+    margin-top: 15px;
+    gap: 20px;
+  }
+
+  .background {
+    border-radius: 0 !important;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .content {
+    font-size: 30px;
+  }
+  .background_contents {
+    margin-right: 35px;
+  }
+
+  .dashboard--container {
+    min-height: 100%;
+    min-width: 100%;
+  }
+
+  .back_navigator {
+    width: 100% !important;
+  }
+  .assist_bar {
+    display: none !important;
+  }
+  .cmti_logos {
+    width: 130px;
+    margin-left: -5rem;
+  }
+  .assist_bars {
+    margin-top: 12rem;
+    padding: 2.2rem;
+  }
+}

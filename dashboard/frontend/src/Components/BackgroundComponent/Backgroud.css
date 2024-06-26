@@ -1,0 +1,101 @@
+/* Company Name */
+.bg--container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100vw; /* Full viewport width to ensure the container spans the entire screen */
+  height: 100px;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.bg--main {
+  display: flex; /* Flexbox layout to align children in a row */
+  flex-wrap: nowrap; /* Prevent wrapping to next line */
+  gap: 20px; /* Optional: space between items */
+  overflow: hidden; /* Hide any overflowing content */
+  white-space: nowrap; /* Prevent line breaks within the text */
+  }
+
+
+.bg--transitionsItem {
+  overflow: visible;
+  width: 100%;
+  color: rgb(26, 0, 173);
+  display: inline-block;
+  white-space: nowrap; /* Prevent text from wrapping to next line */
+  justify-content: start;
+  align-items: center;
+  font-size: 3.2rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+  will-change: transform, opacity, height;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.main--app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main--background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@media screen and (max-width: 992px) {
+  .bg--main {
+      height: 280px; /* Adjusted height for smaller screens */
+  }
+
+  .bg--transitionsItem {
+      font-size: 2rem; /* Adjusted font size for smaller screens */
+  }
+
+  .main--app {
+      height: auto; /* Allow height to adjust to content */
+  }
+}
+
+@media (min-width: 1024px) {
+  
+  .bg--transitionsItem {
+    font-size: 1.8rem;
+  }
+  .bg--main {
+    gap: 2px;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+  
+  .bg--transitionsItem {
+    font-size: 2.7rem;
+  }
+  .bg--main {
+    gap: 10px;
+  }
+  .bg--container {
+    margin-top: -2rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  
+  .bg--transitionsItem {
+    font-size: 3.2rem;
+  }
+  .bg--main {
+    gap: 20px;
+  }
+  .bg--container {
+    margin-top: 0;
+  }
+
+}

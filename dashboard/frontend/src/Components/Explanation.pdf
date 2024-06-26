@@ -1,0 +1,78 @@
+.htaccess := 
+
+RewriteBase / : This sets the base URL for all subsequent rewrite rules. 
+                It essentially tells the server that the rewrite rules apply to the root directory of your website.
+
+RewriteRule ^index\.html$ - [L] : Purpose: This rule matches any request for index.html and tells the server to do nothing (the - means no substitution).
+                                  ^index.html$: The ^ denotes the start of the string, index\.html is the literal filename (with \. escaping the dot), and $ denotes 
+                                                the end of the string. This ensures that only the exact string index.html is matched.
+                                  [L]: This is a flag that stands for "Last". It means if this rule matches, no further rules are processed.
+
+RewriteCond %{REQUEST_FILENAME} !-f : Purpose: This condition checks if the requested URL is not an existing file.
+                                      %{REQUEST_FILENAME}: This is the full local file path to the requested resource.
+                                      !-f: The ! negates the condition, and -f checks if the file exists. So !-f means "if the file does not exist".
+
+
+RewriteCond %{REQUEST_FILENAME} !-d : Purpose: This condition checks if the requested URL is not an existing directory.
+                                      %{REQUEST_FILENAME}: Again, this is the full local file path to the requested resource.
+                                      !-d: The ! negates the condition, and -d checks if the directory exists. So !-d means "if the directory does not exist".
+
+RewriteRule . /index.html [L] : Purpose: This rule matches any request (the . matches any single character, which effectively means any URL) and rewrites it to 
+                                index.html.
+                                .: This matches any character (or URL).
+                                /index.html: This is the substitution part, redirecting all non-file and non-directory requests to index.html.
+                                [L]: As before, this flag means "Last", indicating that this is the last rule to be processed if it matches.
+
+Vibration 
+/*
+
+  @media screen and (min-width: 1080px ) {
+    .frequency_label {
+      width: 500px;
+      font-size: 15px;
+    font-family: Orbitron;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    }
+    .rpm_label {
+      width: 500px;
+      font-size: 15px;
+    font-family: Orbitron;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    }
+    .freq_box {
+      box-shadow: rgba(26, 3, 233, 0.25) 0px 14px 28px, rgba(6, 36, 207, 0.22) 0px 10px 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    
+    .vib_chart {
+      box-shadow: rgba(26, 3, 233, 0.25) 0px 14px 28px, rgba(6, 36, 207, 0.22) 0px 10px 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+    }
+    
+    .freq_vib {
+      box-shadow: rgba(3, 110, 233, 0.25) 0px 14px 28px, rgba(6, 194, 207, 0.22) 0px 10px 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 1000px;
+    }
+    
+  .Update-button{
+    height: 65px;
+    width: 65px;
+    padding: 5px;
+    border-radius: 50%;
+    color: #ddd;
+    font-weight: bold;
+    background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
+  }
+  }
+
+  */
+

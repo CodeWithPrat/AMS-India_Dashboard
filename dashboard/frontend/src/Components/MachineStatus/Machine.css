@@ -1,0 +1,151 @@
+/* Machine Text */
+.machine_text {
+    width: 100%;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Machine Button */
+.machine_button {
+    width: 100%;
+}
+
+/* Card Status Classes */
+.card-off {
+    background-color: red;
+}
+
+.card-idle {
+    background-color: yellow;
+}
+
+.card-running {
+    background-color: green;
+}
+
+.card-machining {
+    background-color: blue;
+}
+
+/* Machine Status */
+.machine-status-tab {
+    padding: 20px;
+}
+
+.card-running {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 60px;
+    padding: 30px;
+}
+
+.card-running .card-body {
+    text-align: center;
+}
+
+.date-picker,
+.start-time,
+.end-time {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 40px;
+    margin: 10px;
+}
+
+.update-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.update-button:hover {
+    background-color: #012e5e;
+    color: white;
+    transform: scale(1.12);
+    transition: all 0.2s ease-in-out;
+}
+
+.chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 700px !important;
+    width: 95% !important;
+    font-size: 14px !important;
+}
+
+.back_navigator {
+    width: 65% !important;
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 12px;
+}
+
+/* Media queries for laptop (max-width: 992px) */
+@media (max-width: 992px) {
+    .machine_text {
+        font-size: 2rem;
+    }
+    .back_navigator {
+        width: 100% !important;
+    }
+    .assist_bar {
+        margin-top: 3rem;
+    }
+}
+
+/* Media queries for mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    .machine_text {
+        font-size: 1.5rem;
+    }
+    
+    .back_navigator {
+        width: 100% !important;
+    }
+}
+
+/* Custom responsive adjustments */
+
+@media screen and (max-width: 932px) {
+    .machine_texts {
+        padding: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 330px;
+        justify-content: center;
+        align-items: center;
+    }
+    .machine_text {
+        font-size: 1.2rem !important;
+        margin-left: 10px;
+    }
+    .machine_button {
+        font-size: 0.8rem;
+    }
+    #currentChart {
+        overflow-y: scroll;
+        height: 350px !important;
+        width: 600px;
+    }
+    .back_navigator {
+        width: 100% !important;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .back_nav {
+        width: 35% !important;
+    }
+}
