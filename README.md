@@ -45,5 +45,5 @@ To get a local copy up and running, follow these simple steps:
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your/repository.git
+   git clone https://github.com/your/repository.git](https://github.com/CodeWithPrat/AMS-India_Dashboard.git
    cd repository
